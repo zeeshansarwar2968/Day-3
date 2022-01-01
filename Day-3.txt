@@ -1,0 +1,300 @@
+QUESTION-1::
+For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+ANSWER:
+
+CODE:
+
+var employeeData = [
+    {
+      firstName: "Harry",
+      SecondName: "Carpenter",
+      age: "27",
+      city: "New-York",
+      salary: "80000$",
+      designation: "Software Engineer",
+    },
+    {
+      firstName: "Ronald",
+      SecondName: "Spiff",
+      age: "29",
+      city: "Washington D.C.",
+      salary: "86000$",
+      designation: "Software Developer",
+    },
+    {
+      firstName: "Leonard",
+      SecondName: "Dippard",
+      age: "28",
+      city: "Montreal",
+      salary: "89000$",
+      designation: "Software Engineer",
+      },
+      {
+      firstName: "Sheldon",
+      SecondName: "Cooper",
+      age: "31",
+      city: "New-Jersey",
+      salary: "70000$",
+      designation: "Researcher",
+      }
+  ];
+
+//This is a normal For loop
+
+  for (var i = 0; i < employeeData.length; i++) {
+    console.log(`
+  ${employeeData[i].firstName}
+  ${employeeData[i].SecondName}
+  ${employeeData[i].age}
+  ${employeeData[i].city}
+  ${employeeData[i].designation}
+    `);
+  }
+
+//This is a For Each loop
+
+  employeeData.forEach(edata => {
+    console.log(`
+  ${edata.firstName}
+  ${edata.SecondName}
+  ${edata.age}
+  ${edata.city}
+  ${edata.designation}
+    `);
+  }); 
+
+  //This is a For in loop
+
+  for (var i in employeeData) {
+    console.log(`
+      ${employeeData[i].firstName}
+      ${employeeData[i].SecondName}
+      ${employeeData[i].age}
+      ${employeeData[i].city}
+      ${employeeData[i].designation}
+      `);
+  } 
+
+  //This is a For of loop
+
+  for (var i of employeeData) {
+    console.log(`
+      ${i.firstName}
+      ${i.SecondName}
+      ${i.age}
+      ${i.city}
+      ${i.designation}
+      `);
+  }
+
+
+OUTPUT:
+
+//This is the output for a normal For loop
+script.js:124 
+  Harry
+  Carpenter
+  27
+  New-York
+  Software Engineer
+    
+script.js:124 
+  Ronald
+  Spiff
+  29
+  Washington D.C.
+  Software Developer
+    
+script.js:124 
+  Leonard
+  Dippard
+  28
+  Montreal
+  Software Engineer
+    
+script.js:124 
+  Sheldon
+  Cooper
+  31
+  New-Jersey
+  Researcher
+
+
+//This is the output for a For Each loop
+
+script.js:135 
+  Harry
+  Carpenter
+  27
+  New-York
+  Software Engineer
+    
+script.js:135 
+  Ronald
+  Spiff
+  29
+  Washington D.C.
+  Software Developer
+    
+script.js:135 
+  Leonard
+  Dippard
+  28
+  Montreal
+  Software Engineer
+    
+script.js:135 
+  Sheldon
+  Cooper
+  31
+  New-Jersey
+  Researcher
+
+
+//This is the output for a For in loop
+
+script.js:155 
+      Harry
+      Carpenter
+      27
+      New-York
+      Software Engineer
+      
+script.js:155 
+      Ronald
+      Spiff
+      29
+      Washington D.C.
+      Software Developer
+      
+script.js:155 
+      Leonard
+      Dippard
+      28
+      Montreal
+      Software Engineer
+      
+script.js:155 
+      Sheldon
+      Cooper
+      31
+      New-Jersey
+      Researcher
+
+//This is the output for a For of loop
+
+script.js:166 
+      Harry
+      Carpenter
+      27
+      New-York
+      Software Engineer
+      
+script.js:166 
+      Ronald
+      Spiff
+      29
+      Washington D.C.
+      Software Developer
+      
+script.js:166 
+      Leonard
+      Dippard
+      28
+      Montreal
+      Software Engineer
+      
+script.js:166 
+      Sheldon
+      Cooper
+      31
+      New-Jersey
+      Researcher
+
+
+
+QUESTION-2:
+
+Create your own resume data in JSON format
+
+ANSWER::
+
+CODE:
+
+var resumeData = {
+      firstName: "Zeeshan",
+      SecondName: "Sarwar",
+      age: "27",
+      Address: { 
+          ApartmentNo : 1409,
+          BlockNo : "B",
+          Society: "Nyati Elysia",
+          Area : "Kharadi",
+          City : "Pune",
+          State : "Maharashtra",
+          PinCode : 411014
+      },
+      education : {
+          highSchool : {
+              school: "IIS-Jubail",
+              stream: "Science",
+              aggregate: "86%"
+          },
+          Graduation : {
+              college : "IET-Lucknow",
+              branch: "ETC",
+              aggregate: "74%"
+
+          },
+          PostGrad: {
+            college : "IIFT-Delhi",
+            branch: "International Trade",
+            aggregate: "76%"
+          }
+      },
+      designation: "System Engineer",
+    
+};
+
+console.log(resumeData)
+
+
+OUTPUT:
+
+{firstName: 'Zeeshan', SecondName: 'Sarwar', age: '27', Address: {…}, education: {…}, …}
+Address: {ApartmentNo: 1409, BlockNo: 'B', Society: 'Nyati Elysia', Area: 'Kharadi', City: 'Pune', …}
+SecondName: "Sarwar"
+age: "27"
+designation: "System Engineer"
+education:
+Graduation: {college: 'IET-Lucknow', branch: 'ETC', aggregate: '74%'}
+PostGrad: {college: 'IIFT-Delhi', branch: 'International Trade', aggregate: '76%'}
+highSchool: {school: 'IIS-Jubail', stream: 'Science', aggregate: '86%'}
+[[Prototype]]: Object
+firstName: "Zeeshan"
+[[Prototype]]: Object
+
+
+
+
+
+
+QUESTION-3:
+
+Read about the difference between window, screen and document in javascript
+
+
+ANSWER:
+
+A brief explanation of the difference between window, screen and document objects:,
+
+Window, screen, and document in javascript, are defined in the context of the browser tab the webpage is displayed on.
+
+The fundamental relationship between the three, is their presence in each browser tab with each tab having its own window,
+while a window has window.document and window.screen properties associated with the window class.
+
+For each browser tab there is a respective top-level window object. Document objects are used for rendering the window object, 
+while screen object defines the physical attributes of the display.
+
+
